@@ -17,4 +17,7 @@ document.getElementById('picture-2-button-2').addEventListener('click',function(
 // for picture 3 button 3
 document.getElementById('picture-3-button-3').addEventListener('click',function(){
     addDonateAmount ('picture-3-input-3','display-amaount-button-3')
+
+    subtractDonateAmount('picture-3-input-3','my-total-amount')
+
 })
