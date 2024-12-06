@@ -39,7 +39,7 @@
       <main>
         <section>
             <div class="flex items-center justify-center gap-7 mt-20">
-                <button class="btn  sm:btn-sm sm:py-6 md:btn-md lg:btn-lg bg-[#B4F461]">Donation</button>
+                <button class="btn  sm:btn-sm sm:py-6 md:btn-md lg:btn-lg bg-[#B4F461]" id="donation-btn">Donation</button>
                 <button class="btn  sm:btn-sm sm:py-6 md:btn-md lg:btn-lg bg-white" id="history-btn">History</button>
             </div>
         </section>
@@ -111,15 +111,63 @@
           </section>
 
           <!-- this is for History of donate  -->
-        <section id="hide-section" class="hidden">
-          <h1 class="text-2xl">Donate section</h1>
-        </section>  
+        <section id="hide-section" class="md:container mx-auto hidden ">
+          <div class="flex justify-center mt-20 mb-20">
+            <h1 class="text-2xl">Donate section</h1>
+          </div>
+        </section>
+          
+        <section>
+              <!-- Modal Success -->
+              <div id="successModal" class="fixed inset-0 bg-black bg-opacity-50 flex items-start justify-center text-center hidden">
+                <div class="bg-white rounded-lg shadow-lg p-6 w-1/3 mt-20 text-center"> <!-- Adjust "mt-20" for top offset -->
+                  <h3 class="text-2xl font-bold text-gray-800">Congrats!</h3>
+                  <div class="mt-4">
+                    <img
+                      src="./assets/coin.png"
+                      alt="Success Icon"
+                      class="mx-auto w-12 h-12">
+                  </div>
+                  <p class="mt-4 text-gray-700">You Have Donated for Noakhali</p>
+                  <p class="font-semibold text-green-500 mt-2">Successfully</p>
+                  <div class="mt-6">
+                    <button
+                      class="bg-gray-200 text-gray-700 px-4 py-2 rounded hover:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-400"
+                      id="close-success-modal">
+                      Close Confirmation
+                    </button>
+                  </div>
+                </div>
+              </div>
+              
+              <!-- Modal UnSuccess -->
+              <div id="unSuccessModal" class="fixed inset-0 bg-black bg-opacity-50 flex items-start justify-center text-center hidden">
+                <div class="bg-white rounded-lg shadow-lg p-6 w-1/3 mt-20 text-center"> <!-- Adjust "mt-20" for top offset -->
+                  <h3 class="text-2xl font-bold text-gray-800">SORRY!</h3>
+                  <div class="mt-4">
+                    <img
+                      src="./assets/coin.png"
+                      alt="Failure Icon"
+                      class="mx-auto w-12 h-12">
+                  </div>
+                  <p class="font-semibold text-green-500 mt-2">Your Donation has Failed</p>
+                  <div class="mt-6">
+                    <button
+                      class="bg-gray-200 text-gray-700 px-4 py-2 rounded hover:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-400"
+                      id="close-unsuccess-modal">
+                      Close Confirmation
+                    </button>
+                  </div>
+                </div>
+              </div>
+        </section>
       </main>
-      <footer>
-                <!-- footer background  -->
-                <section class="bg-[#F9F7F3] py-10">
 
-                </section>
+      
+      <footer>
+        <!-- footer background  -->
+        <section class="bg-[#F9F7F3] py-10">
+        </section>
       </footer>
       <script src="js/home.js"></script>
       <script src="js/ShareFunction.js"></script>
