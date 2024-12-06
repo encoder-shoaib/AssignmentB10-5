@@ -40,3 +40,10 @@ function subtractDonateAmount (id1, id2){
     document.getElementById(id2).innerText = total;
 }
 
+
+function showSectionById(id){
+    // add hidden of all section 
+    document.getElementById('donate-section').classList.add('hidden')
+    // remove hidden by id 
+    document.getElementById(id).classList.remove('hidden');
+}

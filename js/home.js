@@ -19,5 +19,18 @@ document.getElementById('picture-3-button-3').addEventListener('click',function(
     addDonateAmount ('picture-3-input-3','display-amaount-button-3')
 
     subtractDonateAmount('picture-3-input-3','my-total-amount')
-
 })
+
+
+
+document.getElementById('history-btn').addEventListener('click',function(){
+    showSectionById('history-btn')
+})
+
+
+
+
+
+
+
+
