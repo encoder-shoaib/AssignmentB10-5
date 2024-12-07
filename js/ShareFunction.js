@@ -14,7 +14,7 @@ function getTextFieldValueById(id){
 }
 
 // get 2 id and add there value then show  in id2
-function addDonateAmount (id1, id2,id3){
+function addDonateAmount (id1, id2,id3,nameOfDonate){
     const PictureInputValue = getInputFieldValueById(id1)
     console.log(PictureInputValue);
 
@@ -42,7 +42,21 @@ function addDonateAmount (id1, id2,id3){
         document.getElementById("close-success-modal").addEventListener("click", function () {
               modal.classList.add("hidden"); // Hide the modal
         });
+
+        // add to transaction history
+        const div = document.createElement('div');
+        div.classList.add('border-2', 'rounded-lg','p-10','mt-4','text-center');
+        const date = new Date()
+        div.innerHTML = `
+            <p class ="md:text-lg font-bold">${PictureInputValue} Taka is ${nameOfDonate}</p>
+            <p class ="md:text-lg">Date: ${date}</p>
+        `;
+        // Append to the transaction history
+        document.getElementById('amount-history-for-every-donate').appendChild(div);
     }
+
+
+    
 
 
 }
