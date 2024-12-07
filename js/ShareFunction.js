@@ -54,11 +54,6 @@ function addDonateAmount (id1, id2,id3,nameOfDonate){
         // Append to the transaction history
         document.getElementById('amount-history-for-every-donate').appendChild(div);
     }
-
-
-    
-
-
 }
 
 // get 2 id and add there value then show  in id2
@@ -92,7 +87,7 @@ function subtractDonateAmount (id1, id2){
               modal.classList.add("hidden"); // Hide the modal
         });
     }
-
+    
 }
 
 
